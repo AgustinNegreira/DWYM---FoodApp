@@ -1,12 +1,12 @@
-import { OrderItem } from "../OrderItem/OrderItem";
+import Order from "../Order/Order";
 
 function App() {
-    return (
-        <>
-        <div>FoodApp</div>
-        <OrderItem />
-        </>
-    );
+  return (
+    <div className="app-container">
+      <h1>FoodApp</h1>
+      <Order />
+    </div>
+  );
 }
 
 export default App;

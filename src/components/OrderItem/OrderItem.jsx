@@ -6,4 +6,4 @@ function OrderItem({ name, price, quantity }) {
     );
   }
   
-  export default OrderItem;  
+export default OrderItem;  

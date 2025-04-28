@@ -1,7 +1,9 @@
-export const OrderItem = () => {
+function OrderItem({ name, price, quantity }) {
     return (
-        <div>
-            item1
-        </div>
+      <li className="order-item">
+        {name} x{quantity} - ${price * quantity}
+      </li>
     );
-}
+  }
+  
+  export default OrderItem;  

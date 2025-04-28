@@ -1,10 +1,14 @@
 import { FoodElement } from "../FoodElement/FoodElement";
 
-export function FoodList({ Products }) {
-
+export function FoodList({ foodElements }) {
     return (
-        <ul>
-            {products.map(producto => renderProducto(producto))}
-        </ul>
+        <div>
+            <ul>
+                {foodElements.map(producto => (
+                    <FoodElement key={producto.id} product={producto} />
+                ))}
+            </ul>
+        </div>
     );
 }
+

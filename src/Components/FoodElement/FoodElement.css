@@ -1,0 +1,9 @@
+.stock-positive {
+    color: green;
+    font-weight: bold;
+}
+
+.stock-zero {
+    color: red;
+    font-weight: bold;
+}

@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import App from './Components/App/App.jsx'
+import App from './components/App/App.jsx'
 
 const PRODUCTS = [
   {id: "1", price: "$1", stock: 5, img: "img"},

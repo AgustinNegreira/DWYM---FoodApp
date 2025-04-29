@@ -1,5 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+
 import App from './components/App/App.jsx'
 
 const PRODUCTS = [
@@ -9,6 +10,7 @@ const PRODUCTS = [
   {id: "4", price: "$1", stock: 2, img: "img4"},
   {id: "5", price: "$1", stock: 0, img: "img5"},
 ];
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

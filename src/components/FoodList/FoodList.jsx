@@ -1,4 +1,6 @@
+import './FoodList.css';    
 import { FoodElement } from "../FoodElement/FoodElement";
+
 
 export function FoodList({ foodElements }) {
     return (

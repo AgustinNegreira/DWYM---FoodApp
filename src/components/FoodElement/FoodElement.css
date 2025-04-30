@@ -1,9 +1,36 @@
+.food-element {
+    width: 120px;
+    height: 120px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.food-element img {
+    max-width: 70%;
+    max-height: 70%;
+    object-fit: contain;
+}
+
+.stock-positive,
+.stock-zero {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
 .stock-positive {
     color: green;
-    font-weight: bold;
 }
 
 .stock-zero {
     color: red;
-    font-weight: bold;
 }

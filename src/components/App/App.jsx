@@ -1,17 +1,12 @@
 import Order from "../Order/Order";
 import { FoodList } from "../FoodList/FoodList";
+import './App.css';
 
-function App({foodElements}) {
-
-  const addToCart = (food) => {
-    foodElements.foods.find(f => f.name === food.name);
-    
-  } 
-
+function App({foodElements, orders}) {
   return (
     <div className="app-container">
       <h1>FoodApp</h1>
-      <Order />
+      <Order orders={orders} />
       <FoodList foodElements={foodElements} />
     </div>
   );

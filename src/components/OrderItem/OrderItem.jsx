@@ -1,7 +1,7 @@
-function OrderItem({ name, price, quantity }) {
+function OrderItem({ order }) {
     return (
       <li className="order-item">
-        {name} x{quantity} - ${price * quantity}
+        {order.name} x{order.quantity} - ${order.price * order.quantity}
       </li>
     );
   }

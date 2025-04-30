@@ -1,0 +1,19 @@
+.FoodList {
+    width: 100%;
+    flex: 1; /* permite que crezca dentro de app-container */
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.FoodList ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+    gap: 1rem;
+    max-height: 100%;
+    margin: 0;
+}

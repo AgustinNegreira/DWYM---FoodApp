@@ -3,9 +3,9 @@ export function FoodElement({ product }) {
     const stockClass = product.stock > 0 ? 'stock-positive' : 'stock-zero';
 
     return (
-        <li key={product.id}>
-            <div>
-                {product.img}
+        <li>
+            <div className="food-element">
+                <img src={product.img} alt={product.name} />
                 <span className={stockClass}>
                     {product.stock}
                 </span>

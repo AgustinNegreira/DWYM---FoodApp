@@ -23,7 +23,7 @@ function App() {
     if (selectedFood.stock === 0) {
       return;
     }
-    
+
     const updatedFoods = data.foods.map(food =>
       food.name === selectedFood.name ? { ...food, stock: food.stock - 1 } : food
     );
@@ -44,11 +44,22 @@ function App() {
     setData({ foods: updatedFoods, orders: updatedOrders })
   }
 
+  const removeFromCart = (selectedOrder) => {
+    const updatedOrders = data.orders.filter(order => order.name !== selectedOrder.name)
+
+    const updatedFoods = data.foods.map(food =>
+      food.name === selectedOrder.name ? { ...food, stock: food.stock + selectedOrder.quantity }
+        : food
+    );
+
+    setData({ foods: updatedFoods, orders: updatedOrders})
+  }
+
 
   return (
     <div className="app-container">
       <h1>FoodApp</h1>
-      <Order orders={data.orders} />
+      <Order orders={data.orders} removeOrder={removeFromCart}/>
       <FoodList foodElements={data.foods} addFood={addToCart} />
     </div>
   );

@@ -1,7 +1,8 @@
-function OrderItem({ order }) {
+function OrderItem({ order, removeOrder}) {
     return (
       <li className="order-item">
         {order.name} x{order.quantity} - ${order.price}
+        <button className='remove-button' onClick={() => removeOrder(order)}>❌</button>
       </li>
     );
   }

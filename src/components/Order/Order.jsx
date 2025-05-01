@@ -1,3 +1,4 @@
+import './Order.css';
 import OrderItemHolder from '../OrderItemHolder/OrderItemHolder';
 
 function Order({orders, removeOrder}) {

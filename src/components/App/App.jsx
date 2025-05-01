@@ -52,15 +52,17 @@ function App() {
         : food
     );
 
-    setData({ foods: updatedFoods, orders: updatedOrders})
+    setData({ foods: updatedFoods, orders: updatedOrders })
   }
 
 
   return (
     <div className="app-container">
       <h1>FoodApp</h1>
-      <Order orders={data.orders} removeOrder={removeFromCart}/>
-      <FoodList foodElements={data.foods} addFood={addToCart} />
+      <div className="content">
+        <FoodList foodElements={data.foods} addFood={addToCart} />
+        <Order orders={data.orders} removeOrder={removeFromCart} />
+      </div>
     </div>
   );
 }

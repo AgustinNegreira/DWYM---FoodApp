@@ -1,3 +1,5 @@
+import './OrderItem.css';
+
 function OrderItem({ order, removeOrder}) {
     return (
       <li className="order-item">

@@ -13,3 +13,13 @@
     overflow: hidden;
     padding: 2rem;
 }
+
+.content {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .content > * {
+    flex: 1;
+  }
+  

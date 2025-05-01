@@ -1,14 +1,16 @@
 import './FoodElement.css';
-export function FoodElement({ product }) {
+export function FoodElement({ product, addFood }) {
     const stockClass = product.stock > 0 ? 'stock-positive' : 'stock-zero';
 
     return (
         <li>
             <div className="food-element">
-                <img src={product.img} alt={product.name} />
+                <span className="food-emoji">{product.img}</span>
                 <span className={stockClass}>
-                    {product.stock}
+                    Precio: ${product.price} <br />
+                    Stock: {product.stock}
                 </span>
+                    <button className='add-button' onClick={() => addFood(product)}>Añadir</button>
             </div>
         </li>
     );

@@ -50,3 +50,8 @@
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
+
+.food-element.dark {
+    background-color: #3d3d3d;
+    color: white
+}

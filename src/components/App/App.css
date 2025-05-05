@@ -4,7 +4,8 @@
     height: 90vh;
     margin: 2rem auto;
     background-color: #f8f8f8;
-    border-radius: 10%; /* Hace el contenedor redondo */
+    border-radius: 10%;
+    /* Hace el contenedor redondo */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,9 +18,17 @@
 .content {
     display: flex;
     align-items: flex-start;
-  }
-  
-  .content > * {
+}
+
+.content>* {
     flex: 1;
-  }
-  
+}
+
+.dark-body {
+    background-color: #232323;
+}
+
+.app-container.dark {
+    background-color: #515151;
+    color: white
+}

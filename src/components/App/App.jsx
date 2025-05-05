@@ -55,12 +55,22 @@ function App() {
     setData({ foods: updatedFoods, orders: updatedOrders })
   }
 
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    document.body.className = darkMode ? 'dark-body' : '';
+  }, [darkMode]);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
 
   return (
-    <div className="app-container">
+    <div className={darkMode ? "app-container dark" : "app-container"}>
+      <button onClick={toggleDarkMode}>Dark Mode</button>
       <h1>FoodApp</h1>
       <div className="content">
-        <FoodList foodElements={data.foods} addFood={addToCart} />
+        <FoodList darkMode={darkMode} foodElements={data.foods} addFood={addToCart} />
         <Order orders={data.orders} removeOrder={removeFromCart} />
       </div>
     </div>

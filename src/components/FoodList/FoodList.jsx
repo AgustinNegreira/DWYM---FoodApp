@@ -2,12 +2,12 @@ import './FoodList.css';
 import { FoodElement } from "../FoodElement/FoodElement";
 
 
-export function FoodList({ foodElements, addFood }) {
+export function FoodList({ darkMode, foodElements, addFood }) {
     return (
         <div className="FoodList">
             <ul>
                 {foodElements.map(producto => (
-                    <FoodElement key={producto.id} product={producto} addFood={addFood}/>
+                    <FoodElement darkMode={darkMode} key={producto.id} product={producto} addFood={addFood}/>
                 ))}
             </ul>
         </div>

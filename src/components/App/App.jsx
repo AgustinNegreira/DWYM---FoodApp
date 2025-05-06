@@ -60,7 +60,7 @@ function App() {
 
   return (
     <div className={darkMode ? "app-container dark" : "app-container"}>
-      <button className={darkMode? "dark-mode-button dark" : "dark-mode-button"}  onClick={toggleTheme}>Dark Mode</button>
+      <button className={"dark-mode-button"}  onClick={toggleTheme}>Dark Mode</button>
       <h1>FoodApp</h1>
       <div className="content">
         <FoodList foodElements={data.foods} addFood={addToCart} />

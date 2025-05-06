@@ -2,6 +2,7 @@ import Order from "../Order/Order";
 import { FoodList } from "../FoodList/FoodList";
 import './App.css';
 import React, { useState, useEffect } from 'react';
+import { useTheme } from "../../context/ThemeContext";
 
 function App() {
 
@@ -55,22 +56,14 @@ function App() {
     setData({ foods: updatedFoods, orders: updatedOrders })
   }
 
-  const [darkMode, setDarkMode] = useState(false);
-
-  useEffect(() => {
-    document.body.className = darkMode ? 'dark-body' : '';
-  }, [darkMode]);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
+  const { darkMode, toggleTheme } = useTheme()
 
   return (
     <div className={darkMode ? "app-container dark" : "app-container"}>
-      <button onClick={toggleDarkMode}>Dark Mode</button>
+      <button className={darkMode? "dark-mode-button dark" : "dark-mode-button"}  onClick={toggleTheme}>Dark Mode</button>
       <h1>FoodApp</h1>
       <div className="content">
-        <FoodList darkMode={darkMode} foodElements={data.foods} addFood={addToCart} />
+        <FoodList foodElements={data.foods} addFood={addToCart} />
         <Order orders={data.orders} removeOrder={removeFromCart} />
       </div>
     </div>

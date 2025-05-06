@@ -1,5 +1,10 @@
 import './FoodElement.css';
-export function FoodElement({ darkMode, product, addFood }) {
+import { useTheme } from "../../context/ThemeContext";
+
+export function FoodElement({ product, addFood }) {
+
+    const { darkMode, toggleTheme } = useTheme();
+
     const stockClass = product.stock > 0 ? 'stock-positive' : 'stock-zero';
 
     return (

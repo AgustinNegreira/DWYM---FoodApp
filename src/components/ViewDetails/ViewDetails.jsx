@@ -28,9 +28,9 @@ export function ViewDetails() {
                 <div>
                     <h1>{food.name}</h1>
                     <span className="food-emoji-detail">{food.img}</span>
-                    <p>{food.description}</p>
                     <p>Precio: {food.price}</p>
                     <p>Cantidad: {food.stock}</p>
+                    <p>{food.description}</p>
                     <button className="back-button" onClick={() => navigate("/")}>Volver</button>
                 </div>
             ) : (

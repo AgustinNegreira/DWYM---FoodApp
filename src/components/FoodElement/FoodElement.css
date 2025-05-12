@@ -1,11 +1,11 @@
 .food-element {
     width: 120px;
-    height: 120px;
+    height: 150px;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 12px;
     position: relative;
-    display: flex;
+    display: grid;
     align-items: center;
     justify-content: center;
     margin: 10px;
@@ -20,9 +20,6 @@
 
 .stock-positive,
 .stock-zero {
-    position: absolute;
-    bottom: 8px;
-    right: 8px;
     font-size: 0.85rem;
     font-weight: bold;
 }

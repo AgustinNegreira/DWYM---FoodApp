@@ -3,6 +3,8 @@ import { FoodList } from "../FoodList/FoodList";
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import { useTheme } from "../../context/ThemeContext";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ViewDetails } from "../ViewDetails/ViewDetails";
 
 function App() {
 
@@ -59,14 +61,20 @@ function App() {
   const { darkMode, toggleTheme } = useTheme()
 
   return (
-    <div className={darkMode ? "app-container dark" : "app-container"}>
-      <button className={"dark-mode-button"}  onClick={toggleTheme}>Dark Mode</button>
-      <h1>FoodApp</h1>
-      <div className="content">
-        <FoodList foodElements={data.foods} addFood={addToCart} />
-        <Order orders={data.orders} removeOrder={removeFromCart} />
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={
+          <div className={darkMode ? "app-container dark" : "app-container"}>
+            <button className={"dark-mode-button"} onClick={toggleTheme}>Dark Mode</button>
+            <h1>FoodApp</h1>
+            <div className="content">
+              <FoodList foodElements={data.foods} addFood={addToCart} />
+              <Order orders={data.orders} removeOrder={removeFromCart} />
+            </div>
+          </div>} />
+        <Route path="/verDetalles/:id" element={<ViewDetails />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

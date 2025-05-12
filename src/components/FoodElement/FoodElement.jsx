@@ -1,7 +1,9 @@
 import './FoodElement.css';
 import { useTheme } from "../../context/ThemeContext";
+import { useNavigate } from "react-router-dom";
 
 export function FoodElement({ product, addFood }) {
+    const navigate = useNavigate();
 
     const { darkMode, toggleTheme } = useTheme();
 
@@ -16,6 +18,7 @@ export function FoodElement({ product, addFood }) {
                     Stock: {product.stock}
                 </span>
                 <button className='add-button' onClick={() => addFood(product)}>Añadir</button>
+                <button className='add-button' onClick={() => navigate(`/verDetalles/${product.id}`)}>Ver detalles</button>
             </div>
         </li>
     );

@@ -1,4 +1,4 @@
-import Order from '../Order/Order';
+import {Order} from '../Order/Order';
 import OrderItem from '../OrderItem/OrderItem';
 
 function OrderItemHolder({orders, removeOrder}) {

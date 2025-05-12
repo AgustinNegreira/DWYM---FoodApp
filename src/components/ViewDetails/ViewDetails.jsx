@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import "./ViewDetails.css";
 
 export function ViewDetails() {
     const params = useParams();
     const [food, setFood] = useState();
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchData = async () => {
@@ -22,15 +23,15 @@ export function ViewDetails() {
     }, []);
 
     return (
-        <div>
+        <div className="content">
             {food ? (
                 <div>
                     <h1>{food.name}</h1>
                     <span className="food-emoji-detail">{food.img}</span>
                     <p>{food.description}</p>
                     <p>Precio: {food.price}</p>
-                    <p>cantidad: {food.stock}</p>
-
+                    <p>Cantidad: {food.stock}</p>
+                    <button className="back-button" onClick={() => navigate("/")}>Volver</button>
                 </div>
             ) : (
                 <p>Cargando...</p>
